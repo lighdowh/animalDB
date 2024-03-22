@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./ImageSlider.css";
+import gif1 from "../../../public/gif/paws.gif";
 
 const slideStyles = "w-full h-full rounded-[10px] bg-cover bg-center";
 
@@ -37,18 +38,21 @@ const ImageSlider = ({ slides }) => {
 
   const slideStylesWidthBackground = "slideStyles";
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     goToNext(currentIndex);
-  //   }, 10000);
-  // });
+  useEffect(() => {
+    setTimeout(() => {
+      goToNext(currentIndex);
+    }, 5000);
+  });
 
   if (!slides || slides.length === 0) {
     // If slides is not available or empty, you can return a loading message or null
     return (
-      <p className="text-5xl absolute top-1/2 right-1/2 left-1/2 bottom-1/2 font-bold">
-        Loading...
-      </p>
+      <>
+        <p className="text-5xl absolute top-1/2 right-1/2 left-1/2 bottom-1/2 font-bold">
+          Loading...
+        </p>
+        {/* <img src={gif1} alt="GIF 1" /> */}
+      </>
     ); // Adjust this as needed
   }
 
@@ -61,9 +65,10 @@ const ImageSlider = ({ slides }) => {
           </div>
           <div className={slideStylesWidthBackground + " flex "}>
             <img
-              src={"/images/animals/" + slides[currentIndex].image_path}
+              // src={"/images/animals/" + slides[currentIndex].image_path}
+              src={"" + slides[currentIndex].image_path}
               alt=""
-              className="ml-[10%] mt-1 h-[700px] w-[500px] bg-cover duration-500 translate-x-1 "
+              className="ml-[10%] mt-1 h-[700px] w-[600px] bg-cover duration-500 translate-x-1 "
             />
             <div className="flex-column ml-[10%] mt-[10%]">
               <p className="text-[50px]">{slides[currentIndex].name}</p>

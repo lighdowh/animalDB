@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.card {
+  border: 1px solid #bbdefb; /* Light blue border */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #e3f2fd; /* Light blue background */
+  text-align: center; /* Center align text */
+}
+
+.card>p{
+  font-family : "Roboto";
+}
+
+.card h3 {
+  margin: 0;
+  color: #1976d2; /* Dark blue text */
+}
+
+.card p {
+  margin: 5px 0;
+  color: #1565c0; /* Slightly darker blue text */
+}
+
+.card button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #64b5f6; /* Medium blue button */
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.card button.delete {
+  background-color: #e57373; /* Light red color for delete button */
+}
+
+.card button:hover {
+  background-color: #42a5f5; /* Darker blue on hover */
+}
+
+form {
+  margin-top: 20px;
+  text-align: center; /* Center align text */
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #bbdefb; /* Light blue border */
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #64b5f6; /* Medium blue button */
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #42a5f5; /* Darker blue on hover */
+}
+
+.form-container{
+  background: rgb(237, 192, 136);
+}
+
+form > input{
+  background-color: bisque;
+}
+
+.form-container > button{
+  background-color: black !important;
+}
